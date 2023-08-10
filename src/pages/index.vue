@@ -1,15 +1,8 @@
 <script setup lang="ts">
-import { RouterLink } from 'vue-router'
+import { TheImageProxy } from '~/composables/image'
 
-let size = $(useStorage('size', 100))
-
-function onLarge() {
-  size += 20
-}
-
-function onReset() {
-  size = 100
-}
+const mode = ref(false)
+const toggle = useToggle(mode)
 </script>
 
 <template>
@@ -21,21 +14,20 @@ function onReset() {
         btn
         to="/foo"
       >
-        Go
+        Foo
       </RouterLink>
 
-      <button ml-3 btn @click="onLarge">
-        EnLarge
-      </button>
-      <button ml-3 btn @click="onReset">
-        reset
+      <RouterLink
+        ml3 btn
+        to="/bar"
+      >
+        Bar
+      </RouterLink>
+
+      <button ml-3 btn @click="toggle()">
+        Toggle
       </button>
     </div>
-    <div m10 flex="~ col <sm:row gap-4" items-center>
-      <FloatProxy :style="{ width: `${size}px`, height: `${size}px` }" rounded-full />
-      <p flex-1>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-      </p>
-    </div>
+    <TheImageProxy :class="mode ? 'w-50 h-50' : 'w-60 h-30'" rounded-xl />
   </div>
 </template>
