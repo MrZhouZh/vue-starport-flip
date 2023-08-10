@@ -1,30 +1,14 @@
 <script setup lang="ts">
 import { TheImageProxy } from '~/composables/image'
 
-const mode = ref(false)
+const mode = ref(true)
 const toggle = useToggle(mode)
 </script>
 
 <template>
-  <div>
-    <div>Index</div>
-
-    <div>
-      <RouterLink
-        btn
-        to="/foo"
-      >
-        Foo
-      </RouterLink>
-
-      <RouterLink
-        ml3 btn
-        to="/bar"
-      >
-        Bar
-      </RouterLink>
-
-      <button ml-3 btn @click="toggle()">
+  <div p4>
+    <div p4>
+      <button btn @click="toggle()">
         Toggle
       </button>
     </div>

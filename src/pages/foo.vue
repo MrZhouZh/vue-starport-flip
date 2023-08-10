@@ -14,18 +14,11 @@ function onReset() {
 
 <template>
   <div flex="~ col" items-center>
-    <div>Foo</div>
-    <div>
-      <RouterLink
-        class="m-3 text-sm btn"
-        to="/"
-      >
-        Back
-      </RouterLink>
-      <button ml-3 btn @click="onLarge">
+    <div flex="~ gap2">
+      <button btn @click="onLarge">
         EnLarge
       </button>
-      <button ml-3 btn @click="onReset">
+      <button btn @click="onReset">
         reset
       </button>
     </div>

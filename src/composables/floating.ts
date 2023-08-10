@@ -37,7 +37,7 @@ export function createFloating<T extends Component>(component: T) {
         rect = proxyEl.value?.getBoundingClientRect()
       }
 
-      useMutationObserver(proxyEl.value, update, {
+      useMutationObserver(proxyEl, update, {
         childList: true,
         subtree: true,
         attributes: true,
@@ -56,7 +56,6 @@ export function createFloating<T extends Component>(component: T) {
   const proxy = defineComponent({
     setup(props, ctx) {
       const attrs = useAttrs()
-
       const el = ref<HTMLElement>()
 
       metadata.attrs = attrs
