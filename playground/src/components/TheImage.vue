@@ -4,7 +4,7 @@
 //   'https://images.unsplash.com/photo-1691531315982-f6bccf4bd875?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=60',
 // ]
 
-const a = $ref(false)
+const a = ref(false)
 </script>
 
 <template>

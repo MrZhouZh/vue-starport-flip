@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { TheImageProxy } from '~/composables/image'
 
-let size = $(useStorage('size', 100))
+const size = useStorage('size', 100)
 
 function onLarge() {
-  size += 20
+  size.value += 20
 }
 
 function onReset() {
-  size = 100
+  size.value = 100
 }
 </script>
 
