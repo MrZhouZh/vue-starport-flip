@@ -19,7 +19,7 @@ onMounted(() => {
     class="my-component"
     overflow-hidden
     w-full h-full
-    transition-all duration-500
+    transition-all duration-900
     relative select-none
   >
     <img
