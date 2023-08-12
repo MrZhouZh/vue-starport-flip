@@ -18,6 +18,7 @@ export const StarportProxy = defineComponent({
     ...proxyProps,
   },
   setup(props, ctx) {
+    console.log(':: StarporProxy', InjectionState)
     const state = inject(InjectionState)!
     const sp = computed(() => state.getInstance(props.port, props.component))
     const el = ref<HTMLElement>()

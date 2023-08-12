@@ -7,6 +7,7 @@ import { StarportCraft } from './StarportCraft'
 export const StarportCarrier = defineComponent({
   name: 'StarportCarrier',
   setup(_, { slots }) {
+    console.log('::StarportCarrier', InjectionState)
     const state = createInternalState(inject(InjectionOptions, {}))
     const app = getCurrentInstance()!.appContext.app
     app.provide(InjectionState, state)
