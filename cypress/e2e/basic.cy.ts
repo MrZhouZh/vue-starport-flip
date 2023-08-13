@@ -25,7 +25,7 @@ context('Basic', () => {
     cy.get('.image-0 .my-component').should('not.exist')
 
     cy.url()
-      .should('eq', `${BASE_URL}/0`)
+      .should('eq', `${BASE_URL}0`)
 
     // flying
     cy.get('.circle-0 .my-component').should('not.exist')
@@ -38,7 +38,7 @@ context('Basic', () => {
     // back
     cy.get('.back-btn').click()
     // lift-off
-    cy.get('.circle-0 .my-component').should('.not-exist')
+    cy.get('.circle-0 .my-component').should('.not.exist')
 
     cy.url()
       .should('eq', BASE_URL)
@@ -71,7 +71,7 @@ context('Basic', () => {
     })
 
     cy.url()
-      .should('eq', `${BASE_URL}/0`)
+      .should('eq', `${BASE_URL}0`)
 
     cy.get('@consoleLog').should((_v) => {
       const v = _v as any as Sinon.SinonStub

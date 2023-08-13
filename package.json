@@ -39,7 +39,7 @@
     "lint": "eslint .",
     "typecheck": "vue-tsc --noEmit",
     "test": "vitest",
-    "test:e2e": "cypress open",
+    "test:e2e": "cypress open --config-file cypress.config.ts",
     "prepublishOnly": "nr build",
     "release": "bumpp --commit --tag --push && pnpm publish"
   },
