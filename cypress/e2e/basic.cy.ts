@@ -38,7 +38,7 @@ context('Basic', () => {
     // back
     cy.get('.back-btn').click()
     // lift-off
-    cy.get('.circle-0 .my-component').should('.not.exist')
+    cy.get('.circle-0 .my-component').should('not.exist')
 
     cy.url()
       .should('eq', BASE_URL)
