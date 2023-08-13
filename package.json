@@ -34,7 +34,7 @@
   "scripts": {
     "build": "pkgroll",
     "dev": "pkgroll --watch",
-    "play": "vite playground --open",
+    "play": "vite playground --open --port=3000",
     "play:build": "vite build playground",
     "lint": "eslint .",
     "typecheck": "vue-tsc --noEmit",
