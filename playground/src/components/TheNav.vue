@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { isDark, toggleDark } from '~/composables/dark'
+import { isDebug, toggleDebug } from '~/composables/dark'
 
 const route = useRoute()
 </script>
@@ -10,10 +10,15 @@ const route = useRoute()
       {{ route.path }}
     </div>
     <div flex-auto />
-    <button mr3 class="icon-btn !outline-none" @click="toggleDark()">
-      <div v-if="isDark" i-carbon-moon />
-      <div v-else i-carbon-sun />
+    <button
+      class="icon-btn !outline-none p1"
+      :class="isDebug ? '!text-red bg-red:10 rounded' : ''"
+      text-4 mr-3
+      @click="toggleDebug()"
+    >
+      <div i-carbon-debug />
     </button>
+    <NDarkToggle />
     <div flex="~ gap1" justify-center>
       <router-link btn to="/">
         /
