@@ -7,3 +7,7 @@
 ## Credit
 
 [antfu/vue-starport](https://github.com/antfu/vue-starport)
+
+## References
+
+[cypress configuration](https://docs.cypress.io/guides/references/configuration)
