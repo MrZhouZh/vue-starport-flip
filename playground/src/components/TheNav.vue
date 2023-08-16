@@ -19,12 +19,17 @@ const route = useRoute()
       <div i-carbon-debug />
     </button>
     <NDarkToggle />
+    <a
+      i-carbon-logo-github icon-btn
+      text-4 mr-3
+      rel="noreferrer"
+      href="https://github.com/MrZhouZh/vue-starport-flip"
+      target="_blank"
+      title="GitHub"
+    />
     <div flex="~ gap1" justify-center>
       <router-link btn to="/">
         /
-      </router-link>
-      <router-link btn to="/foo">
-        /foo
       </router-link>
       <router-link btn to="/bar">
         /bar
