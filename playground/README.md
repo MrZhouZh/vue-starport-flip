@@ -1,3 +1,3 @@
 # Vue starport flip
 
-vue-starport playground.
+vue starport flip playground.

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Starport } from 'vue-starport'
+import { Starport } from 'vue-starport-flip'
 
 const a = ref(false)
 const toggle = useToggle(a)

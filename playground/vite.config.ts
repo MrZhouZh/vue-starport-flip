@@ -12,7 +12,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '~/': `${path.resolve(__dirname, 'src')}/`,
-      'vue-starport': path.resolve(__dirname, '../src/index.ts'),
+      'vue-starport-flip': path.resolve(__dirname, '../src/index.ts'),
     },
   },
   plugins: [
@@ -48,7 +48,7 @@ export default defineConfig({
           ],
         },
         {
-          from: 'vue-starport',
+          from: 'vue-starport-flip',
           names: [
             'Starport',
             'StarportCarrier',
