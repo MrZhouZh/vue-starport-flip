@@ -5,9 +5,13 @@ type NDocument = Document & {
   startViewTransition: any
 }
 
-const props = defineProps<{
-  useTransition?: boolean
-}>()
+const props = withDefaults(
+  defineProps<{
+    useTransition?: boolean
+  }>(), {
+    useTransition: true,
+  },
+)
 
 const isAppearanceTransition = (document as NDocument).startViewTransition
   && !window.matchMedia('(prefers-reduced-motion:reduce)').matches
