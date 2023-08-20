@@ -5,6 +5,10 @@ type NDocument = Document & {
   startViewTransition: any
 }
 
+const props = defineProps<{
+  useTransition?: boolean
+}>()
+
 const isAppearanceTransition = (document as NDocument).startViewTransition
   && !window.matchMedia('(prefers-reduced-motion:reduce)').matches
 
@@ -13,6 +17,10 @@ const isAppearanceTransition = (document as NDocument).startViewTransition
  * @see https://github.com/vuejs/vitepress/pull/2347
  */
 function toggle(event: MouseEvent) {
+  if (!props.useTransition) {
+    isDark.value = !isDark.value
+    return
+  }
   if (!isAppearanceTransition || !event) {
     isDark.value = !isDark.value
     return

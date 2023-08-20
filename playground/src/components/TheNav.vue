@@ -18,7 +18,7 @@ const route = useRoute()
     >
       <div i-carbon-debug />
     </button>
-    <NDarkToggle />
+    <NDarkToggle :use-transition="true" />
     <a
       i-carbon-logo-github icon-btn
       text-4 mr-3
